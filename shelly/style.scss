@@ -1,0 +1,67 @@
+body{
+    margin: 0;
+    width: 100%;
+    background-color: #DDEDEC;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    
+    width: 40%;
+    
+
+    h1{
+        text-align: center;
+        font-size: 3rem;
+    }
+
+    .select-type{
+        
+        position: relative;
+        height: 7vh;
+        background:  url('../img/Polygon1.png') no-repeat scroll right white ;
+        background-position-x: 95%;
+        border-radius: 0.5rem;
+        background-size: 2.5rem 2rem;
+        padding-right: 2rem;
+
+        select{
+            left: 0;
+            top: 0;
+            position: absolute;
+            line-height: 7vh;
+            appearance:none;
+            outline: none;
+            text-align: center;
+            width: 100%;
+            //padding: 1rem 0;  
+            border: none;
+            background-color: transparent;
+            padding-right: 1.5rem;
+            font-size: 2rem;
+        }
+
+    }
+    .content{
+        margin-top: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        background-color: white;
+        border-radius: 1rem;
+        padding: 1.5rem 0;
+
+        h1{
+            font-size: 3rem;
+            margin: 0;
+        }
+
+        i{
+            font-size: 8rem;
+        }
+    }
+}

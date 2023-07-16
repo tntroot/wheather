@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- CSS only -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="./shelly/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body onload="onlong()">
+    <div class="container" >
+        <h1>天氣預報</h1>
+        <div class="select-type">
+            <select name="" id="select_option" onchange="weather_content()">
+
+            </select>
+            <!-- <div style=" width: 0;height: 0;position: absolute;border: 2rem solid;border-color: #9BB7B5 transparent transparent transparent;top: 1rem;right: 1rem;">
+            </div> -->
+        </div>
+        <div class="content">
+            <div>
+                <h1 id="County"></h1>  
+                <p id="weather"></p>
+                <p id="CF"></p>
+                <p id="chance_of_rain"></p>
+            </div>
+            <i id="weather_new" class="fa-solid fa-cloud-sun fa-2xl"></i>
+        </div>
+        
+        
+    </div>
+
+    <script src="./js/main.js"></script>
+</body>
+</html>
