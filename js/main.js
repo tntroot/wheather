@@ -38,6 +38,8 @@ function weather_content(){
             const weather_view=+lo_Name[index].weatherElement[0].time[1].parameter.parameterValue;
         
             weather_icon(weather_view);  
+
+            //console.log(new Date( lo_Name[index].weatherElement[0].time[1].startTime).getHours());
         }
     });
 }
