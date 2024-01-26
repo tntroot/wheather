@@ -11,7 +11,7 @@ const contanier=[County,weather,CF,chance_of_rain];
 const weather_new=document.getElementById('weather_new');
 
 function onlong(){
-    fetch("https://opendata.cwb.gov.tw/api/v1/rest/datastore/F-C0032-001?Authorization=CWB-8F61116C-E1C0-482C-BEED-06AC6294E383&elementName=")
+    fetch("https://opendata.cwa.gov.tw/fileapi/v1/opendataapi/F-C0032-005?Authorization=CWB-8F61116C-E1C0-482C-BEED-06AC6294E383&downloadType=WEB&format=JSON")
         .then(res => res.json())
         .then(data => {
             metlList=data;
