@@ -18,7 +18,8 @@ body {
 }
 .container .select-type {
   position: relative;
-  height: 7vh;
+  padding: 2rem 0;
+
   background: url("../img/Polygon1.png") no-repeat scroll right white;
   background-position-x: 95%;
   border-radius: 0.5rem;
@@ -26,9 +27,6 @@ body {
   padding-right: 2rem;
 }
 .container .select-type select {
-  left: 0;
-  top: 0;
-  position: absolute;
   line-height: 7vh;
   -webkit-appearance: none;
      -moz-appearance: none;

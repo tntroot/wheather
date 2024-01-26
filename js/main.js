@@ -11,12 +11,12 @@ const contanier=[County,weather,CF,chance_of_rain];
 const weather_new=document.getElementById('weather_new');
 
 function onlong(){
-    fetch("https://opendata.cwb.gov.tw/api/v1/rest/datastore/F-C0032-001?Authorization=CWB-8F61116C-E1C0-482C-BEED-06AC6294E383&elementName=")
+    fetch("https://opendata.cwa.gov.tw/fileapi/v1/opendataapi/F-C0032-005?Authorization=CWB-8F61116C-E1C0-482C-BEED-06AC6294E383&downloadType=WEB&format=JSON")
         .then(res => res.json())
         .then(data => {
-            metlList=data;
+            metlList=data.cwaopendata.dataset;
             console.log(metlList);
-            const lo_Name=metlList.records.location;
+            const lo_Name=metlList.location;
 
             Object.keys(lo_Name).forEach((index,item) => {
                 select_option.innerHTML +=`<option value="${lo_Name[index].locationName}">${lo_Name[index].locationName}</option>`;         
@@ -27,12 +27,12 @@ function onlong(){
 }
 
 function weather_content(){
-    const lo_Name=metlList.records.location;
+    const lo_Name=metlList.location;
     Object.keys(lo_Name).forEach((index,item) => {
         if(lo_Name[index].locationName===select_option.value){
             contanier[0].innerText=lo_Name[index].locationName;
             contanier[1].innerText=lo_Name[index].weatherElement[0].time[1].parameter.parameterName;
-            contanier[2].innerText=lo_Name[index].weatherElement[2].time[1].parameter.parameterName + "-" +lo_Name[index].weatherElement[4].time[1].parameter.parameterName + " °C";
+            contanier[2].innerText=lo_Name[index].weatherElement[2].time[1].parameter.parameterName + "-" +lo_Name[index].weatherElement[1].time[1].parameter.parameterName + " °C";
             contanier[3].innerText=`降雨機率: ${lo_Name[index].weatherElement[1].time[1].parameter.parameterName} %`;        
         
             const weather_view=+lo_Name[index].weatherElement[0].time[1].parameter.parameterValue;
